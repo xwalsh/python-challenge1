@@ -1,11 +1,8 @@
 import csv
 import os
 
-# Define path to the CSV file directly
+# path
 csvpath = '/Users/xavier/Documents/GitHub/python-challenge1/PyPoll/Resources/election_data.csv'
-
-# Alternative path using relative location (not used in actual code)
-election_data_csv = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'resources', 'election_data.csv')
 
 # Confirm file being read
 print('File:', csvpath)
@@ -30,7 +27,7 @@ with open(csvpath, encoding='UTF-8') as csvfile:
         else:
             votescandidates[candidate] += 1
 
-# Write election results to both terminal and output file
+# Write election results 
 with open('Election_Data_Results.txt', 'w') as file:
     print("Election Results")
     file.write("Election Results\n")
